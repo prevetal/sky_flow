@@ -1,0 +1,587 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 280px;
+    }
+
+
+    .block.big_m
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+    .content_flex .content
+    {
+        width: calc(100% - var(--sidebar_width));
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 48px;
+
+        gap: 24px;
+    }
+
+
+    .pagination .limit .current
+    {
+        padding-right: 24px;
+    }
+
+
+    .pagination .limit .arr
+    {
+        right: 0;
+
+        width: 16px;
+        height: 16px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .data
+    {
+        padding-top: 8px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px 24px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scroll-padding: 0 24px;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+
+    .tabs::-webkit-scrollbar
+    {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+
+    .tabs::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .tabs .btn
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        vertical-align: top;
+
+        scroll-snap-align: start;
+    }
+
+
+    .tabs .btn + .btn
+    {
+        margin-left: -4px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .links
+    {
+        gap: 24px;
+    }
+
+
+    header .menu
+    {
+        gap: 52px;
+    }
+
+
+    header .catalog_modal .col_left
+    {
+        width: 280px;
+        margin-left: -24px;
+        padding: 24px 0;
+    }
+
+
+    header .catalog_modal .col_main
+    {
+        width: calc(100% - 256px);
+        padding: 32px 0 32px 24px;
+    }
+
+
+    header .catalog_modal .col_left .items a
+    {
+        padding: 12px 24px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding-top: 12px;
+        padding-bottom: 24px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        margin-left: -24px;
+    }
+
+
+
+    aside .links
+    {
+        padding: 28px 24px;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    .filter .field + .field
+    {
+        margin-top: 20px;
+    }
+
+
+    .filter .name
+    {
+        font-size: 15px;
+
+        padding: 20px 24px;
+    }
+
+
+    .filter .data
+    {
+        padding: 8px 24px 24px;
+    }
+
+
+    .filter .checkbox
+    {
+        padding-left: 32px;
+    }
+
+
+    .filter .range .input
+    {
+        font-size: 15px;
+
+        height: 35px;
+        padding-top: 0;
+    }
+
+
+    .filter .submit
+    {
+        padding: 20px 24px;
+
+        gap: 16px;
+    }
+
+
+    .irs
+    {
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        width: 448px;
+        min-height: 560px;
+        margin-left: -24px;
+        padding: 40px 24px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 32px;
+
+        margin-top: 68px;
+    }
+
+
+    .main_slider .desc
+    {
+        margin-top: 48px;
+    }
+
+
+
+    /*------------------
+        Catalog info
+    ------------------*/
+    .catalog_info .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+
+    .catalog_info .row > *
+    {
+        width: calc(33.333% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .catalog_info .item .main
+    {
+        font-size: 17px;
+        font-weight: 700;
+
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .info
+    {
+        width: 448px;
+        margin-left: -24px;
+        padding: 140px 24px;
+    }
+
+
+    .about_info .head .info .conmpany
+    {
+        width: 256px;
+    }
+
+
+    .about_info .head .info .title
+    {
+        font-size: 44px;
+    }
+
+
+    .about_info .head .data
+    {
+        width: calc(100% - 400px);
+        margin-right: -24px;
+        padding: 40px 80px;
+    }
+
+
+
+    .about_info .middle .data
+    {
+        width: calc(100% - 400px);
+        margin-left: -24px;
+        padding: 40px 80px;
+    }
+
+
+    .about_info .middle .image
+    {
+        width: 448px;
+        min-height: 360px;
+        margin-right: -24px;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .item
+    {
+        font-size: 15px;
+
+        min-height: 340px;
+        padding: 40px 24px 24px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .service
+    {
+        padding: 24px;
+    }
+
+
+    .services .service .name
+    {
+        font-size: 19px;
+    }
+
+
+    .services .service .desc
+    {
+        width: 400px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .block_head
+    {
+        width: 360px;
+    }
+
+
+    .projects .slider
+    {
+        width: calc(100% - 420px);
+    }
+
+
+    .projects .swiper-slide
+    {
+        width: 800px;
+    }
+
+
+    .projects .swiper-button-prev
+    {
+        margin-left: -420px;
+    }
+
+    .projects .swiper-button-next
+    {
+        margin-left: -352px;
+    }
+
+
+    .projects .project .thumb
+    {
+        width: 260px;
+        min-height: 272px;
+    }
+
+
+    .projects .project .thumb + *
+    {
+        width: calc(100% - 284px);
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 19px;
+    }
+
+
+
+    /*----------------
+        vVacancies
+    ----------------*/
+    .vacancies .exp
+    {
+        margin-top: 24px;
+        padding-top: 11px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .name
+    {
+        font-size: 17px;
+    }
+
+
+
+    /*-------------
+        Sitemap
+    -------------*/
+    .sitemap
+    {
+        padding-bottom: 60px;
+    }
+
+
+    .sitemap .links
+    {
+        gap: 24px;
+    }
+
+
+    .sitemap .links .sub
+    {
+        margin-top: 20px;
+        padding-bottom: 4px;
+
+        gap: 20px;
+    }
+
+
+    .sitemap .arrow
+    {
+        width: 14px;
+        height: 408px;
+        margin-top: 80px;
+        margin-left: 32px;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page.block.bg
+    {
+        padding-top: 180px;
+        padding-bottom: 180px;
+    }
+
+
+
+    /*-------------------------
+        Categories carousel
+    -------------------------*/
+    .categories_carousel
+    {
+        padding-top: 24px;
+    }
+
+
+    .categories_carousel .category .thumb
+    {
+        margin-bottom: 12px;
+    }
+
+
+
+    /*----------------------
+        Project examples
+    ----------------------*/
+    .project_examples .row
+    {
+        margin-bottom: -4px;
+        margin-left: -4px;
+    }
+
+
+    .project_examples .row > *
+    {
+        width: calc(33.333% - 4px);
+        margin-bottom: 4px;
+        margin-left: 4px;
+    }
+
+
+    .project_examples .project .thumb,
+    .project_examples .project .name,
+    .project_examples .project .desc
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .category
+    {
+        font-size: 18px;
+
+        padding: 16px 16px 24px;
+    }
+
+
+    .categories .category .thumb
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .bottom
+    {
+        padding-top: 24px;
+    }
+
+
+    footer .links
+    {
+        width: 100%;
+    }
+
+
+    footer .copyright
+    {
+        width: 100%;
+        margin-top: 12px;
+    }
+}

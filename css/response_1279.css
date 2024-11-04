@@ -1,0 +1,689 @@
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 26px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .block.big_m
+    {
+        margin-bottom: 60px;
+    }
+
+
+    .swiper-button-prev
+    {
+        left: 279px;
+
+        margin-left: 0;
+    }
+
+    .swiper-button-next
+    {
+        left: 347px;
+
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 32px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination .count
+    {
+        display: none;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        margin-bottom: 12px;
+    }
+
+
+    header .catalog_btn
+    {
+        width: 188px;
+        height: 56px;
+    }
+
+
+    header .search
+    {
+        width: calc(100% - 438px);
+    }
+
+
+    header .search .input
+    {
+        height: 52px;
+    }
+
+
+    header .menu
+    {
+        gap: 24px;
+    }
+
+
+    header .phone a
+    {
+        gap: 12px;
+    }
+
+
+    header .callback_btn,
+    header .langs
+    {
+        margin-left: 16px;
+    }
+
+
+
+    header .catalog_modal .col_left
+    {
+        width: 248px;
+        height: calc(100vh - 150px);
+    }
+
+
+    header .catalog_modal .col_main
+    {
+        width: calc(100% - 224px);
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .input,
+    .form textarea
+    {
+        font-size: 15px;
+    }
+
+
+    .form .agree
+    {
+        padding: 4px 0 12px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block h2
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        width: 420px;
+        min-height: 500px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 28px;
+
+        margin-top: 48px;
+    }
+
+
+    .main_slider .desc
+    {
+        margin-top: 40px;
+    }
+
+
+
+    /*------------------
+        Catalog info
+    ------------------*/
+    .catalog_info .item .main
+    {
+        font-size: 16px;
+    }
+
+
+    .catalog_info .item .sub
+    {
+        gap: 16px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .info
+    {
+        width: 360px;
+        padding: 120px 24px;
+    }
+
+
+    .about_info .head .info .conmpany
+    {
+        width: 234px;
+    }
+
+
+    .about_info .head .info .title
+    {
+        font-size: 40px;
+    }
+
+
+    .about_info .head .data
+    {
+        width: calc(100% - 312px);
+        padding: 40px 60px;
+    }
+
+
+
+    .about_info .middle .data
+    {
+        width: calc(100% - 312px);
+        padding: 40px 60px;
+    }
+
+
+    .about_info .middle .image
+    {
+        width: 360px;
+        min-height: 280px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .service .name
+    {
+        font-size: 18px;
+    }
+
+
+    .services .service > .icon
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .block_head
+    {
+        flex-direction: row;
+
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+
+    .projects .block_head .title
+    {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+
+    .projects .block_head .all_link
+    {
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+        padding-top: 0;
+
+        border-top: none;
+    }
+
+
+    .projects .slider
+    {
+        width: 100%;
+    }
+
+
+    .projects .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .projects .swiper-button-prev,
+    .projects .swiper-button-next
+    {
+        display: none;
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 18px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .brand .logo
+    {
+        height: 100px;
+    }
+
+
+
+    /*----------------
+        vVacancies
+    ----------------*/
+    .vacancies .data
+    {
+        padding: 40px 24px;
+    }
+
+
+    .vacancies .image
+    {
+        min-height: 280px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .name
+    {
+        font-size: 16px;
+    }
+
+
+    .articles .article .desc
+    {
+        margin-top: 20px;
+    }
+
+
+    .articles .article .date
+    {
+        padding-top: 20px;
+    }
+
+
+
+    /*-------------
+        Sitemap
+    -------------*/
+    .sitemap
+    {
+        padding-bottom: 40px;
+    }
+
+
+    .sitemap .arrow
+    {
+        width: 12px;
+        height: 348px;
+        margin-top: 60px;
+        margin-left: 24px;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page.block.bg
+    {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+
+    .error_page .title
+    {
+        padding-left: 16px;
+    }
+
+
+    .error_page .link
+    {
+        padding: 0;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .views .btn:before
+    {
+        width: 44px;
+        height: 44px;
+    }
+
+
+
+    .products .grid > *
+    {
+        width: calc(25% - 20px);
+    }
+
+    .content .products .grid > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+
+    .products .list .product .thumb
+    {
+        width: 200px;
+        height: 144px;
+    }
+
+
+    .products .list .product .info
+    {
+        max-width: calc(100% - 440px);
+        margin-left: 20px;
+    }
+
+
+    .products .list .product .btn
+    {
+        width: 200px;
+    }
+
+
+
+    /*---------------
+        Subscribe
+    ---------------*/
+    .subscribe .form
+    {
+        width: calc(100% - 360px);
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .category
+    {
+        font-size: 16px;
+
+        padding: 16px;
+    }
+
+
+    .categories .category .thumb
+    {
+        margin-bottom: 16px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        width: calc(100% - 460px);
+    }
+
+
+    .product_info .images .big .image
+    {
+        height: 380px;
+    }
+
+
+    .product_info .data
+    {
+        width: 408px;
+        margin-left: auto;
+    }
+
+
+    .product_info .option
+    {
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+
+
+    .product_info .order_btn
+    {
+        margin-top: 32px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback .block_head
+    {
+        width: 380px;
+        padding: 140px 40px 140px 0;
+    }
+
+
+    .feedback .form
+    {
+        max-width: calc(100% - 440px);
+        margin-left: 60px;
+        padding: 40px 0;
+    }
+
+
+    .feedback .bg
+    {
+        display: none;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .item
+    {
+        min-height: 320px;
+        padding: 24px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .cert
+    {
+        padding: 20px 24px;
+    }
+
+
+    .certs .cert .thumb
+    {
+        height: 240px;
+    }
+
+
+
+    /*------------------
+        Product data
+    ------------------*/
+    .product_data .FAQ .block_title
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    /*------------
+        Files
+    ------------*/
+    .files .row
+    {
+        margin-left: -40px;
+    }
+
+
+    .files .row > *
+    {
+        width: calc(33.333% - 40px);
+        margin-left: 40px;
+    }
+
+
+    .files .file .icon
+    {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 32px;
+    }
+
+
+    .files .file .name
+    {
+        font-size: 15px;
+
+        margin-bottom: 24px;
+        padding: 0 8px;
+    }
+
+
+    .files .file .btn
+    {
+        padding: 10px 8px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .col_left
+    {
+        width: 280px;
+    }
+
+
+    footer .col_main
+    {
+        width: calc(100% - 320px);
+    }
+
+
+    footer .phone,
+    footer .work_time,
+    footer .email
+    {
+        margin-top: 32px;
+    }
+
+
+    footer .catalog .items
+    {
+        min-width: 156px;
+        max-width: 220px;
+
+        gap: 24px;
+    }
+
+
+    footer .menu .items
+    {
+        min-width: 156px;
+        max-width: 220px;
+
+        gap: 20px;
+    }
+
+
+    footer .socials
+    {
+        width: 156px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        gap: 20px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        width: 600px;
+        padding: 80px 60px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 26px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .modal .form .line
+    {
+        margin-bottom: 32px;
+    }
+}

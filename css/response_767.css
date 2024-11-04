@@ -1,0 +1,729 @@
+@media print,
+(max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 24px;
+    }
+
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction
+    {
+        display: none;
+    }
+
+
+    .swiper-button-prev
+    {
+        right: 80px;
+        bottom: 36px;
+        left: auto;
+    }
+
+    .swiper-button-next
+    {
+        right: 20px;
+        bottom: 36px;
+        left: auto;
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 20px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 40px;
+
+        gap: 32px;
+    }
+
+
+    .pagination .links
+    {
+        font-size: 15px;
+
+        justify-content: center;
+
+        width: 100%;
+
+        gap: 28px;
+    }
+
+
+    .pagination .limit
+    {
+        margin: 16px auto 0;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        padding-top: 12px;
+    }
+
+
+    .mob_header .logo img
+    {
+        width: 148px;
+    }
+
+
+    .mob_header .phone,
+    .mob_header .callback_btn
+    {
+        display: none;
+    }
+
+
+    .mob_header .search
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .breadcrumbs
+    {
+        font-size: 11px;
+        line-height: 17px;
+
+        min-height: 17px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 32px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .data
+    {
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        min-height: 340px;
+        margin-top: 268px;
+        margin-right: -24px;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 24px;
+
+        margin-top: 0;
+    }
+
+
+    .main_slider .desc
+    {
+        margin-top: 24px;
+    }
+
+
+    .main_slider .link
+    {
+        margin-bottom: 0;
+    }
+
+
+    .main_slider .img
+    {
+        width: 115%;
+        height: 268px;
+        margin-left: -15%;
+    }
+
+
+
+    /*------------------
+        Catalog info
+    ------------------*/
+    .catalog_info .row
+    {
+        margin-left: 0;
+    }
+
+
+    .catalog_info .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .info
+    {
+        display: block;
+
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+        padding: 40px 24px;
+    }
+
+
+    .about_info .head .info .conmpany
+    {
+        font-size: 13px;
+
+        width: 188px;
+    }
+
+
+    .about_info .head .info .title
+    {
+        font-size: 32px;
+    }
+
+
+    .about_info .head .data
+    {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+
+
+    .about_info .middle .data
+    {
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
+        padding: 40px 24px;
+    }
+
+
+    .about_info .middle .image
+    {
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        min-height: 320px;
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+
+
+
+    .about_info .links .row
+    {
+        margin-left: -20px;
+    }
+
+
+    .about_info .links .row > *
+    {
+        margin-left: 20px;
+    }
+
+
+
+    /*--------------
+        Services
+    --------------*/
+    .services .row
+    {
+        margin-left: 0;
+    }
+
+
+    .services .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .services .service .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .block_head
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .projects .swiper-slide
+    {
+        width: calc(100vw - 64px);
+    }
+
+
+    .projects .project .thumb
+    {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 100%;
+    }
+
+
+    .projects .project .thumb + *
+    {
+        width: 100%;
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 16px;
+    }
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .row > *
+    {
+        width: calc(33.333% - 1px);
+    }
+
+
+    .brands .brand:nth-child(4n):after
+    {
+        display: block;
+    }
+
+
+    .brands .brand:nth-child(3n):after
+    {
+        display: none;
+    }
+
+
+    .brands .brand .logo
+    {
+        height: 68px;
+        padding: 12px 16px;
+    }
+
+
+
+    /*----------------
+        vVacancies
+    ----------------*/
+    .vacancies .data
+    {
+        order: 2;
+
+        width: 100%;
+        padding: 24px;
+    }
+
+
+    .vacancies .image
+    {
+        width: 100%;
+        min-height: 240px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .grid
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+    /*-------------
+        Sitemap
+    -------------*/
+    .sitemap
+    {
+        padding-bottom: 0;
+    }
+
+
+    .sitemap .links
+    {
+        gap: 20px;
+    }
+
+
+    .sitemap .links .sub
+    {
+        margin-top: 16px;
+        padding-bottom: 0;
+
+        gap: 16px;
+    }
+
+
+    .sitemap .arrow
+    {
+        width: 10px;
+        height: 288px;
+        margin-top: 48px;
+        margin-left: 20px;
+    }
+
+
+
+    /*----------------
+        Error page
+    ----------------*/
+    .error_page.block.bg
+    {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+
+    .error_page .bg
+    {
+        top: -28px;
+
+        height: 428px;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .sort
+    {
+        gap: 12px;
+    }
+
+
+    .products .views
+    {
+        display: none;
+    }
+
+
+
+    .products .grid
+    {
+        margin-bottom: -16px;
+        margin-left: -16px;
+    }
+
+
+    .products .grid > *,
+    .content .products .grid > *
+    {
+        width: calc(50% - 16px);
+        margin-bottom: 16px;
+        margin-left: 16px;
+    }
+
+
+    .products .swiper-button-prev,
+    .products .swiper-button-next
+    {
+        display: none;
+    }
+
+
+    .products .swiper-slide
+    {
+        visibility: visible;
+
+        width: 240px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+
+    /*----------------------
+        Project examples
+    ----------------------*/
+    .project_examples .row
+    {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+
+    .project_examples .row > *
+    {
+        width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+
+
+    /*---------------
+        Subscribe
+    ---------------*/
+    .subscribe .title
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .subscribe .form .field
+    {
+        width: calc(100% - 200px);
+        max-width: calc(100% - 200px);
+    }
+
+
+    .subscribe .form .submit
+    {
+        width: 180px;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .row
+    {
+        margin-left: 0;
+    }
+
+
+    .categories .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        margin: 0 -24px 24px;
+    }
+
+
+    .product_info .images .big .image
+    {
+        height: 320px;
+    }
+
+
+    .product_info .images .swiper-button-prev
+    {
+        left: 12px;
+    }
+
+    .product_info .images .swiper-button-next
+    {
+        right: 12px;
+    }
+
+
+    .product_info .images .thumbs
+    {
+        display: none;
+    }
+
+
+    .product_info .data
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .product_info .option
+    {
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+
+
+    .product_info .order_btn
+    {
+        margin-top: 24px;
+    }
+
+
+
+    /*------------------
+        Product data
+    ------------------*/
+    .product_data .features > *
+    {
+        position: relative;
+    }
+
+
+    .product_data .features .tooltip
+    {
+        position: static;
+    }
+
+
+    .product_data .features .tooltip .text
+    {
+        top: 24px;
+        left: 0;
+
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+    /*----------------
+        Advantages
+    ----------------*/
+    .advantages .item
+    {
+        font-size: 14px;
+
+        padding: 24px 20px;
+    }
+
+
+
+    /*-----------
+        Certs
+    -----------*/
+    .certs .cert
+    {
+        padding: 24px 20px;
+    }
+
+
+    .certs .cert .thumb
+    {
+        height: 200px;
+    }
+
+
+
+    /*------------
+        Files
+    ------------*/
+    .files .row
+    {
+        margin-left: -24px;
+    }
+
+
+    .files .row > *
+    {
+        width: calc(50% - 24px);
+        margin-left: 24px;
+    }
+
+
+    .files .file .icon
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .files .file .name
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .phone,
+    footer .work_time,
+    footer .email,
+    footer .location
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    footer .email,
+    footer .location
+    {
+        margin-top: 20px;
+    }
+
+
+    footer .catalog
+    {
+        display: none;
+    }
+
+
+    footer .menu
+    {
+        width: calc(50% - 12px);
+    }
+
+
+    footer .requisites
+    {
+        width: 100%;
+    }
+
+
+    footer .socials
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    footer .links,
+    footer .copyright
+    {
+        font-size: 11px;
+    }
+}
