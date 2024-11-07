@@ -4,6 +4,23 @@
     /*-------------------
         Global styles
     -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
+
+
+    .block
+    {
+        margin-bottom: 40px;
+    }
+
+    .block.bg
+    {
+        padding: 40px 0;
+    }
+
+
     .content_flex .content
     {
         width: 100%;
@@ -12,12 +29,16 @@
 
     .swiper-button-prev
     {
-        left: 228px;
+        right: 80px;
+        bottom: 40px;
+        left: auto;
     }
 
     .swiper-button-next
     {
-        left: 288px;
+        right: 20px;
+        bottom: 40px;
+        left: auto;
     }
 
 
@@ -50,156 +71,91 @@
     ------------*/
     header
     {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        right: 100%;
-        left: auto;
-
-        width: 325px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
-
-        transition: transform .3s linear;
+        position: sticky;
 
         background: var(--bg);
     }
 
 
-    header.show
-    {
-        transform: translateX(100%);
-    }
-
-
-    header .scroll
-    {
-        display: flex;
-        overflow: auto;
-        flex-direction: column;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 0 0 24px;
-
-        overscroll-behavior-y: contain;
-    }
-
-
-    header .scroll > *
-    {
-        width: 100%;
-    }
-
-
     header .top
     {
-        order: 2;
-
-        padding: 24px 0;
-    }
-
-
-    header .data
-    {
-        border: none;
-    }
-
-    header .data .cont
-    {
-        padding: 0;
-    }
-
-
-    header .bottom
-    {
-        order: 3;
-
-        padding: 24px 0;
-    }
-
-
-    header .links
-    {
-        align-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 20px;
-    }
-
-
-    header .logo,
-    header .search
-    {
         display: none;
+    }
+
+
+    header .bottom .cont
+    {
+        height: 48px;
     }
 
 
     header .catalog_btn
     {
-        position: relative;
-        z-index: 9;
-
-        width: 100%;
-        height: 48px;
-        margin: 0;
-    }
-
-
-    header .menu
-    {
-        align-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 20px;
-    }
-
-
-    header .menu_item > a
-    {
-        font-size: 12px;
-
-        min-height: 0;
+        width: 196px;
+        height: 62px;
+        margin-left: 20px;
     }
 
 
     header .phone
     {
-        margin-top: 40px;
-        margin-left: 0;
+        position: absolute;
+        z-index: 3;
+        top: auto;
+        right: 148px;
+        bottom: 100%;
+
+        margin: 0;
+        margin-bottom: 22px;
     }
 
 
-    header .callback_btn
+    header .search
     {
-        margin-top: 12px;
-        margin-left: 0;
-        padding: 0;
+        position: absolute;
+        z-index: 3;
+        top: 100%;
+        left: 14px;
+
+        width: 392px;
+        max-width: 100%;
+        margin: 0;
     }
 
 
-    header .langs
+    header .search .input
+    {
+        height: 48px;
+    }
+
+
+    header .menu
     {
         display: none;
     }
 
 
+    header .callback_btn
+    {
+        margin-left: auto;
+    }
+
+
+    header .langs
+    {
+        margin-left: 65px;
+    }
+
+
+    header .mob_menu_btn
+    {
+        display: flex;
+    }
+
 
     header .catalog_modal
     {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 100%;
         left: auto;
@@ -214,8 +170,9 @@
         margin: 0;
 
         transition: transform .3s linear;
+        pointer-events: none;
 
-        background: url(../images/bg_catalog_modal.svg) 100% 100%/50% auto no-repeat #f6f8fb;
+        background: none;
     }
 
 
@@ -238,7 +195,7 @@
     {
         position: absolute;
         z-index: 1;
-        top: 48px;
+        top: 112px;
         left: 0;
 
         overflow: auto;
@@ -249,9 +206,19 @@
         min-height: -webkit-fill-available;
         min-height:         fill-available;
         margin: 0;
-        padding-bottom: 48px;
+        padding-bottom: 112px;
+
+        pointer-events: auto;
 
         overscroll-behavior-y: contain;
+    }
+
+
+    header .catalog_modal .col_left .items a
+    {
+        width: 336px;
+        max-width: 100%;
+        padding: 12px 40px;
     }
 
 
@@ -271,16 +238,17 @@
         min-height: -webkit-fill-available;
         min-height:         fill-available;
         margin: 0;
-        padding: 24px 0 72px;
+        padding: 20px 0 132px;
 
         transition: transform .3s linear;
+        pointer-events: auto;
 
         background: url(../images/bg_catalog_modal.svg) 100% 100%/50% auto no-repeat #f6f8fb;
     }
 
     header .catalog_modal .col_main
     {
-        top: 48px;
+        top: 112px;
     }
 
 
@@ -314,21 +282,19 @@
         min-height: -webkit-fill-available;
         min-height:         fill-available;
         margin: 0;
-        padding: 24px 24px 72px;
+        padding: 40px 20px 132px;
 
         transition: transform .3s linear;
 
-        background: url(../images/bg_catalog_modal.svg) 100% 100%/50% auto no-repeat #f6f8fb;
+        background: url(../images/bg_catalog_modal.svg) 100% calc(100% - 112px)/280px auto no-repeat #f6f8fb;
     }
 
 
-
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
+    header .catalog_modal .col_main .items a
     {
-        display: block;
+        width: 260px;
+        max-width: 100%;
+        padding: 0 20px;
     }
 
 
@@ -344,26 +310,31 @@
 
 
 
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        margin-bottom: 24px;
+    }
+
+
+
     /*-------------
         Sidebar
     -------------*/
     aside
     {
-        width: calc(100% + 48px);
-        max-width: calc(100% + 48px);
-        margin-right: -24px;
+        overflow: hidden;
+
+        height: 0;
     }
 
 
 
     aside .links
     {
-        padding: 24px;
-    }
-
-    aside .links > *
-    {
-        padding-bottom: 4px;
+        display: none;
     }
 
 
@@ -371,15 +342,37 @@
     /*------------
         Filter
     ------------*/
-    .mob_filter_btn
+    .filter
+    {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+
+        display: none;
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+
+        background: var(--bg);
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    .filter.show
     {
         display: block;
     }
 
 
-    .filter
+    .filter .mob_head
     {
-        display: none;
+        display: flex;
     }
 
 
@@ -389,27 +382,44 @@
     -----------------*/
     .main_slider .data
     {
-        width: 360px;
+        width: 100%;
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        min-height: 0;
+        margin-top: 456px;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 40px 20px;
     }
 
 
     .main_slider .title
     {
-        font-size: 26px;
+        font-size: 32px;
 
-        margin-top: 40px;
+        width: 380px;
+        max-width: 100%;
+        margin-top: 0;
     }
 
 
     .main_slider .desc
     {
-        margin-top: 32px;
+        margin-top: 24px;
+    }
+
+
+    .main_slider .link
+    {
+        margin-top: 40px;
     }
 
 
     .main_slider .img
     {
-        object-position: 0 50%;
+        width: 115%;
+        height: 456px;
+        margin-left: -15%;
     }
 
 
@@ -417,9 +427,48 @@
     /*------------------
         Catalog info
     ------------------*/
-    .catalog_info .row > *
+    .catalog_info .row
     {
-        width: calc(50% - 24px);
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .catalog_info .row > *,
+    .catalog_info .row > *.block_head
+    {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .catalog_info .row > *.block_head
+    {
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 23px 19px 17px;
+
+        border: 1px solid #233b6d;
+        background: #f6f8fb;
+    }
+
+
+    .catalog_info .row > *.block_head .title
+    {
+        width: 100%;
+
+        color: #233b6d;
+    }
+
+
+    .catalog_info .row > *.block_head .all_link
+    {
+        margin-top: auto;
+        margin-bottom: 0;
+        margin-left: auto;
     }
 
 
@@ -429,55 +478,70 @@
     ----------------*/
     .about_info .head .info
     {
-        width: 320px;
-        padding: 80px 24px;
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 24px 20px;
     }
 
 
     .about_info .head .info .conmpany
     {
-        width: 210px;
+        font-size: 15px;
+
+        order: 2;
+
+        width: auto;
+        margin-top: 8px;
+        margin-bottom: 0;
+
+        text-align: left;
     }
 
 
     .about_info .head .info .title
     {
-        font-size: 36px;
+        font-size: 32px;
     }
 
 
     .about_info .head .data
     {
-        width: calc(100% - 272px);
-        padding: 40px 24px;
+        width: 100%;
+        padding: 40px 0;
     }
 
 
 
     .about_info .middle .data
     {
-        width: calc(100% - 272px);
+        width: calc(100% + 48px);
+        max-width: calc(100% + 48px);
+        margin-right: -24px;
+        margin-left: -24px;
         padding: 40px 24px;
     }
 
 
     .about_info .middle .image
     {
-        width: 320px;
-        min-height: 260px;
+        width: 100%;
+        max-width: 100%;
+        min-height: 366px;
+        margin-bottom: 40px;
     }
 
 
 
-    .about_info .links .row
+    .about_info .advantages
     {
-        margin-left: -20px;
-    }
-
-
-    .about_info .links .row > *
-    {
-        margin-left: 20px;
+        padding-bottom: 20px;
     }
 
 
@@ -485,22 +549,25 @@
     /*--------------
         Services
     --------------*/
-    .services .service .name
+    .services .service
     {
-        font-size: 17px;
+        padding: 20px;
     }
 
 
     .services .service .desc
     {
-        margin-bottom: 24px;
+        font-size: 13px;
+        line-height: 20px;
+
+        margin-bottom: 48px;
     }
 
 
     .services .service > .icon
     {
-        width: 60px;
-        height: 60px;
+        width: 64px;
+        height: 64px;
     }
 
 
@@ -510,19 +577,29 @@
     --------------*/
     .projects .swiper-slide
     {
-        width: 680px;
+        width: 640px;
     }
 
 
-    .projects .project .name
+    .projects .project .thumb
     {
-        font-size: 17px;
+        width: 280px;
+        min-height: 299px;
+    }
+
+
+    .projects .project .thumb + *
+    {
+        width: calc(100% - 300px);
     }
 
 
     .projects .project .desc
     {
-        margin-bottom: 24px;
+        font-size: 12px;
+        line-height: 18px;
+
+        margin-bottom: 20px;
     }
 
 
@@ -530,6 +607,30 @@
     /*------------
         Brands
     ------------*/
+    .brands .row > *
+    {
+        width: calc(33.333% - 1px);
+    }
+
+
+    .brands .row > *:nth-child(9) ~ *
+    {
+        display: none;
+    }
+
+
+    .brands .brand:nth-child(4n):after
+    {
+        display: block;
+    }
+
+
+    .brands .brand:nth-child(3n):after
+    {
+        display: none;
+    }
+
+
     .brands .brand .logo
     {
         height: 80px;
@@ -540,9 +641,29 @@
     /*----------------
         vVacancies
     ----------------*/
+    .vacancies .data
+    {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .vacancies .exp
+    {
+        padding-right: 95px;
+    }
+
+
     .vacancies .link
     {
-        padding-top: 24px;
+        padding-top: 34px;
+    }
+
+
+    .vacancies .image
+    {
+        width: 100%;
+        min-height: 337px;
     }
 
 
@@ -553,6 +674,24 @@
     .articles .grid
     {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .articles .article .name
+    {
+        font-size: 18px;
+    }
+
+
+    .articles .article .desc
+    {
+        margin-top: 29px;
+    }
+
+
+    .articles .article .date
+    {
+        padding-top: 29px;
     }
 
 
@@ -570,6 +709,12 @@
     /*--------------
         Products
     --------------*/
+    .products .mob_filter_btn
+    {
+        display: flex;
+    }
+
+
     .products .grid > *,
     .content .products .grid > *
     {
@@ -581,6 +726,27 @@
     /*----------------------
         Project examples
     ----------------------*/
+    .project_examples .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .project_examples .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .project_examples .project
+    {
+        padding: 0;
+    }
+
+
     .project_examples .project .name
     {
         font-size: 16px;
@@ -610,8 +776,12 @@
     ------------------*/
     .product_info .images
     {
-        width: 100%;
-        margin-bottom: 40px;
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin: -40px -20px 40px;
+        padding: 40px 15%;
+
+        background: #fff;
     }
 
 
@@ -642,15 +812,25 @@
 
 
 
+    /*------------------
+        Product data
+    ------------------*/
+    .product_data
+    {
+        scroll-margin-top: 132px;
+    }
+
+
+
     /*--------------
         Feedback
     --------------*/
     .feedback .block_head
     {
-        width: calc(100% + 48px);
-        max-width: calc(100% + 48px);
-        margin: 0 -24px 24px;
-        padding: 40px 24px 24px;
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin: 0 -20px 24px;
+        padding: 40px 20px;
     }
 
 
@@ -675,13 +855,17 @@
 
     .advantages .item
     {
-        min-height: 240px;
+        font-size: 14px;
+        line-height: 20px;
+
+        min-height: 364px;
+        padding: 40px;
     }
 
 
     .advantages .item .icon
     {
-        height: 100px;
+        height: 120px;
         margin-bottom: 40px;
     }
 
@@ -733,19 +917,33 @@
 
 
 
+    /*-------------------------
+        Fixed product panel
+    -------------------------*/
+    .fixed_product_panel
+    {
+        top: 112px;
+    }
+
+
+    .fixed_product_panel .anchors
+    {
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 0 20px;
+
+        scroll-padding: 0 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
     footer .col_left
     {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
         width: 100%;
-        padding-bottom: 40px;
+        padding-bottom: 24px;
 
         border: none;
         border-bottom: 1px solid #2088b7;
@@ -755,36 +953,79 @@
     footer .col_main
     {
         width: 100%;
-        margin-top: 40px;
-    }
-
-
-    footer .logo
-    {
-        width: 100%;
-        margin-bottom: 24px;
-    }
-
-
-    footer .phone,
-    footer .work_time,
-    footer .email
-    {
-        margin-top: 0;
-    }
-
-
-    footer .location
-    {
-        width: 168px;
-        max-width: 100%;
-        margin-top: 0;
+        margin-top: 24px;
     }
 
 
     footer .col_main .row + .row
     {
-        padding-top: 40px;
+        padding-top: 32px;
+    }
+
+
+    footer .catalog
+    {
+        width: 100%;
+    }
+
+
+    footer .catalog .items
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+
+    footer .menu
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    footer .menu .items
+    {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+
+    footer .menu:last-child .items
+    {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    footer .requisites
+    {
+        width: 493px;
+        max-width: 100%;
+    }
+
+
+    footer .socials
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    footer .links
+    {
+        gap: 16px 24px;
     }
 
 

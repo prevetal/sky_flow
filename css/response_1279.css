@@ -7,7 +7,7 @@
     :root
     {
         --font_size: 14px;
-        --font_size_title: 26px;
+        --font_size_title: 28px;
     }
 
 
@@ -174,22 +174,6 @@
 
 
 
-    /*------------------
-        Catalog info
-    ------------------*/
-    .catalog_info .item .main
-    {
-        font-size: 16px;
-    }
-
-
-    .catalog_info .item .sub
-    {
-        gap: 16px;
-    }
-
-
-
     /*----------------
         About info
     ----------------*/
@@ -260,25 +244,13 @@
         flex-direction: row;
 
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
 
 
     .projects .block_head .title
     {
-        width: auto;
-        margin-bottom: 0;
-    }
-
-
-    .projects .block_head .all_link
-    {
-        width: auto;
-        margin-top: 0;
-        margin-left: auto;
-        padding-top: 0;
-
-        border-top: none;
+        margin-bottom: 24px;
     }
 
 
@@ -298,10 +270,27 @@
     }
 
 
-    .projects .swiper-button-prev,
+    .projects .swiper-button-prev
+    {
+        top: auto;
+        bottom: 100%;
+        left: 0;
+
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
     .projects .swiper-button-next
     {
-        display: none;
+        top: auto;
+        right: auto;
+        bottom: 100%;
+        left: 64px;
+
+        margin-right: 0;
+        margin-bottom: 24px;
+        margin-left: 0;
     }
 
 
@@ -637,19 +626,20 @@
 
     footer .catalog .items
     {
-        min-width: 156px;
-        max-width: 220px;
-
         gap: 24px;
     }
 
 
     footer .menu .items
     {
+        gap: 20px;
+    }
+
+
+    footer .menu:last-child .items
+    {
         min-width: 156px;
         max-width: 220px;
-
-        gap: 20px;
     }
 
 

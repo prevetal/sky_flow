@@ -292,9 +292,6 @@
 
     .catalog_info .item .main
     {
-        font-size: 17px;
-        font-weight: 700;
-
         margin-bottom: 0;
         padding: 0;
     }
@@ -560,6 +557,66 @@
     .categories .category .thumb
     {
         margin-bottom: 24px;
+    }
+
+
+
+    /*-------------------------
+        Fixed product panel
+    -------------------------*/
+    .fixed_product_panel .anchors
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 48px);
+        margin: 0 -24px;
+        padding: 0 24px;
+
+        white-space: nowrap;
+
+        scroll-padding: 0 24px;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+
+    .fixed_product_panel .anchors::-webkit-scrollbar
+    {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+
+    .fixed_product_panel .anchors::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .fixed_product_panel .anchors > *
+    {
+        display: inline-block;
+
+        max-width: none;
+        margin: 0;
+        padding-right: 16px;
+        padding-left: 16px;
+
+        vertical-align: top;
+
+        scroll-snap-align: start;
+    }
+
+
+    .fixed_product_panel .anchors > * + *
+    {
+        margin-left: -4px;
     }
 
 
