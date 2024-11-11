@@ -1083,11 +1083,14 @@ header .search .submit_btn
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     margin: auto 0;
 
+    transition: background .2s linear;
+
     color: #091b10;
+    border-radius: 50%;
 }
 
 
@@ -1097,6 +1100,12 @@ header .search .submit_btn .icon
 
     width: 24px;
     height: 24px;
+}
+
+
+header .search .submit_btn:hover
+{
+    background: rgba(103, 80, 164, .06);
 }
 
 
@@ -2008,6 +2017,28 @@ aside .links a.active:after
 }
 
 
+.filter .checkbox .check:before
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    content: '';
+    transition: opacity .2s linear;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    opacity: 0;
+    border-radius: 50%;
+    background: rgba(103, 80, 164, .06);
+}
+
+
 .filter .checkbox .check svg
 {
     display: block;
@@ -2019,6 +2050,12 @@ aside .links a.active:after
     transition: opacity .2s linear;
 
     opacity: 0;
+}
+
+
+.filter .checkbox:hover .check:before
+{
+    opacity: 1;
 }
 
 
