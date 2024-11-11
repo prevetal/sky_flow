@@ -381,6 +381,14 @@ button
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.more_link a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -411,11 +419,19 @@ button
     margin: 0 auto;
     padding: 9px 19px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #233b6d;
     border: 1px solid #233b6d;
     border-radius: 2px;
+}
+
+
+.pagination .more_btn:hover
+{
+    color: #fff;
+    background: #233b6d;
 }
 
 
@@ -482,7 +498,7 @@ button
 
     opacity: 0;
     border-radius: 50%;
-    background: #233b6d;
+    background: #2088b7;
 }
 
 
@@ -501,10 +517,16 @@ button
 }
 
 
-.pagination .links a:hover:before,
+.pagination .links a:hover:before
+{
+    opacity: 1;
+}
+
+
 .pagination .links a.active:before
 {
     opacity: 1;
+    background: #233b6d;
 }
 
 
@@ -844,7 +866,7 @@ header .top
 {
     position: relative;
 
-    padding: 12px 0 8px;
+    padding: 4px 0 0;
 
     border-bottom: 1px solid #38b6e2;
 }
@@ -900,10 +922,50 @@ header .links
 
 header .links a
 {
+    position: relative;
+
+    display: inline-block;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
     transition: color .2s linear;
+    vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+header .links a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #233b6d;
+}
+
+
+header .links a:hover,
+header .links a.active
+{
+    color: #233b6d;
+}
+
+
+header .links a:hover:after,
+header .links a.active:after
+{
+    width: 100%;
 }
 
 
@@ -939,11 +1001,20 @@ header .catalog_btn
     height: 61px;
     margin-left: 40px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
     text-transform: uppercase;
 
     color: #fff;
+    border: 1px solid #233b6d;
     background: #233b6d;
+}
+
+
+header .catalog_btn:hover
+{
+    color: #233b6d;
+    background: none;
 }
 
 
@@ -1096,6 +1167,8 @@ header .menu_item > a
     font-size: 13px;
     font-weight: 600;
 
+    position: relative;
+
     display: flex;
     align-content: center;
     align-items: center;
@@ -1104,13 +1177,45 @@ header .menu_item > a
 
     min-height: 48px;
 
-    transition: .2s linear;
+    transition: color .2s linear;
     text-align: center;
     text-decoration: none;
     letter-spacing: .52px;
     text-transform: uppercase;
 
     color: currentColor;
+}
+
+
+header .menu_item > a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #233b6d;
+}
+
+
+header .menu_item > a:hover,
+header .menu_item > a.active
+{
+    color: #233b6d;
+}
+
+
+header .menu_item > a:hover:after,
+header .menu_item > a.active:after
+{
+    width: 100%;
 }
 
 
@@ -1154,7 +1259,15 @@ header .phone .icon
     width: 18px;
     height: 18px;
 
+    transition: transform .2s linear;
+
     color: #38b6e2;
+}
+
+
+header .phone:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -1213,6 +1326,48 @@ header .langs .icon
     height: 18px;
 
     color: #38b6e2;
+}
+
+
+header .langs a span
+{
+    position: relative;
+
+    display: inline-block;
+
+    padding: 16px 0;
+
+    vertical-align: top;
+}
+
+
+header .langs a span:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #233b6d;
+}
+
+
+header .langs a:hover span
+{
+    color: #233b6d;
+}
+
+
+header .langs a:hover span:after
+{
+    width: 100%;
 }
 
 
@@ -1638,12 +1793,47 @@ aside .links > *
 
 aside .links a
 {
+    position: relative;
+
     display: inline-block;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+aside .links a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #233b6d;
+}
+
+
+aside .links a:hover,
+aside .links a.active
+{
+    color: #233b6d;
+}
+
+
+aside .links a:hover:after,
+aside .links a.active:after
+{
+    width: 100%;
 }
 
 
@@ -1658,7 +1848,7 @@ aside .links a
 
     position: relative;
 
-    display: flex;
+    display: none;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -1986,13 +2176,22 @@ aside .links a
     line-height: 20px;
 
     width: 100%;
-    padding: 10px 16px;
+    padding: 9px 15px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #fff;
+    border: 1px solid #233b6d;
     border-radius: 2px;
     background: #233b6d;
+}
+
+
+.filter .submit_btn:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -2003,13 +2202,21 @@ aside .links a
     line-height: 20px;
 
     width: 100%;
-    padding: 10px 16px;
+    padding: 9px 15px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #233b6d;
     border: 1px solid #233b6d;
     border-radius: 2px;
+}
+
+
+.filter .reset_btn:hover
+{
+    color: #fff;
+    background: #233b6d;
 }
 
 
@@ -2149,6 +2356,14 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.block_head .all_link a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -2438,13 +2653,22 @@ aside .links a
     width: 220px;
     max-width: 100%;
     height: 40px;
-    padding: 10px 16px;
+    padding: 9px 15px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #fff;
+    border: 1px solid #233b6d;
     border-radius: 2px;
     background: #233b6d;
+}
+
+
+.form .submit_btn:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -2696,15 +2920,23 @@ aside .links a
     margin-top: auto;
     margin-bottom: 4px;
 
+    transition: .2s linear;
     text-align: center;
     vertical-align: top;
     text-decoration: none;
     letter-spacing: .1px;
 
     color: currentColor;
-    border: 1px solid;
+    border: 1px solid #fff;
     border-radius: 2px;
     background: #233b6d;
+}
+
+
+.main_slider .link:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -2743,6 +2975,7 @@ aside .links a
     position: relative;
 
     display: flex;
+    overflow: hidden;
     flex-direction: column;
 
     min-height: 372px;
@@ -2770,6 +3003,33 @@ aside .links a
 
     opacity: .9;
     background: #233b6d;
+}
+
+
+.catalog_info .item:after
+{
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 100%;
+
+    display: block;
+
+    width: 200%;
+    height: 200%;
+
+    content: '';
+    transition: transform .25s linear;
+    pointer-events: none;
+
+    border-radius: 50%;
+    background: #2088b7;
+}
+
+
+.catalog_info .item:hover:after
+{
+    transform: translate(-75%, -75%);
 }
 
 
@@ -3140,6 +3400,14 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.about_info .links a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -3203,12 +3471,20 @@ aside .links a
 
     max-width: 100%;
     max-height: 100%;
+
+    transition: transform .2s linear;
 }
 
 
 .advantages .item .icon + *
 {
     margin-top: auto;
+}
+
+
+.advantages .item:hover .icon img
+{
+    transform: scale(1.25);
 }
 
 
@@ -3239,15 +3515,38 @@ aside .links a
     position: relative;
 
     display: flex;
+    overflow: hidden;
     flex-direction: column;
 
     padding: 20px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: currentColor;
     border-radius: 2px;
     background: #f6f8fb;
+}
+
+
+.services .service:after
+{
+    position: absolute;
+    z-index: 2;
+    top: -50%;
+    left: 100%;
+
+    display: block;
+
+    width: 100%;
+    height: 200%;
+
+    content: '';
+    transition: .25s linear;
+    pointer-events: none;
+
+    border-radius: 500px;
+    background: #233b6d;
 }
 
 
@@ -3296,6 +3595,7 @@ aside .links a
     margin-top: auto;
     padding: 10px 0;
 
+    transition: color .2s linear;
     letter-spacing: .1px;
 
     color: #38b6e2;
@@ -3310,13 +3610,21 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.services .service .link:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
 .services .service > .icon
 {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     right: 20px;
     bottom: 20px;
 
@@ -3326,6 +3634,23 @@ aside .links a
     height: 129px;
 
     pointer-events: none;
+}
+
+
+.services .service:hover,
+.services .service:hover .link
+{
+    transition: .2s linear .05s;
+
+    color: #fff;
+}
+
+
+.services .service:hover:after
+{
+    transform: translateX(-100%);
+
+    border-radius: 0;
 }
 
 
@@ -3443,7 +3768,10 @@ aside .links a
 
 .projects .project
 {
+    position: relative;
+
     display: flex;
+    overflow: hidden;
     align-content: stretch;
     align-items: stretch;
     flex-wrap: wrap;
@@ -3456,6 +3784,34 @@ aside .links a
     color: var(--text_color);
     border-radius: 2px;
     background: #f6f8fb;
+}
+
+
+.projects .project:after
+{
+    position: absolute;
+    z-index: 2;
+    top: -50%;
+    left: 100%;
+
+    display: block;
+
+    width: 100%;
+    height: 200%;
+
+    content: '';
+    transition: .25s linear;
+    pointer-events: none;
+
+    border-radius: 500px;
+    background: #fff;
+}
+
+
+.projects .project > *
+{
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -3484,6 +3840,16 @@ aside .links a
     height: 100%;
 
     object-fit: cover;
+}
+
+
+.projects .project .thumb img + img
+{
+    z-index: 2;
+
+    transition: opacity .2s linear;
+
+    opacity: 0;
 }
 
 
@@ -3545,6 +3911,27 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.projects .project .link:hover .icon
+{
+    transform: scale(1.25);
+}
+
+
+.projects .project:hover:after
+{
+    transform: translateX(-100%);
+
+    border-radius: 0;
+}
+
+.projects .project:hover .thumb img + img
+{
+    opacity: 1;
 }
 
 
@@ -3723,6 +4110,14 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.vacancies .link a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -3781,6 +4176,7 @@ aside .links a
 
     padding: 20px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: currentColor;
@@ -3855,6 +4251,13 @@ aside .links a
 }
 
 
+.articles .article:hover
+{
+    background: #f6f8fb;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+}
+
+
 
 /*-------------
     Sitemap
@@ -3897,12 +4300,46 @@ aside .links a
 
 .sitemap .links a
 {
+    position: relative;
+
     display: inline-block;
 
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+.sitemap .links a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #233b6d;
+}
+
+
+.sitemap .links a:hover,
+.sitemap .links a.active
+{
+    color: #233b6d;
+}
+
+
+.sitemap .links a:hover:after,
+.sitemap .links a.active:after
+{
+    width: 100%;
 }
 
 
@@ -4008,6 +4445,14 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.error_page .link a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -4381,6 +4826,13 @@ aside .links a
 }
 
 
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after
+{
+    transform: translate(calc(-100% + 3px), calc(-100% + 3px));
+}
+
+
 
 .products .product
 {
@@ -4489,13 +4941,23 @@ aside .links a
 
     width: 100%;
     margin-top: auto;
-    padding: 10px;
+    padding: 9px;
 
+    transition: .2s linear;
+    transition-property: color, background;
     letter-spacing: .1px;
 
     color: #fff;
+    border: 1px solid #233b6d;
     border-radius: 2px;
     background: #233b6d;
+}
+
+
+.products .product .btn:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -4508,6 +4970,8 @@ aside .links a
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    transition: box-shadow .2s linear;
 }
 
 
@@ -4550,6 +5014,12 @@ aside .links a
 }
 
 
+.products .list .product:hover
+{
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .25);
+}
+
+
 
 /*----------------------
     Project examples
@@ -4579,6 +5049,7 @@ aside .links a
 
     padding: 20px 10px;
 
+    transition: .2s linear;
     text-decoration: none;
 
     color: currentColor;
@@ -4663,6 +5134,21 @@ aside .links a
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
+}
+
+
+.project_examples .project .link:hover .icon
+{
+    transform: scale(1.25);
+}
+
+
+.project_examples .project:hover
+{
+    background: #f6f8fb;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
 }
 
 
@@ -5326,6 +5812,12 @@ aside .links a
 }
 
 
+.product_info .option label:hover div
+{
+    background: #fff;
+}
+
+
 .product_info .option input:checked + div
 {
     color: #fff;
@@ -5353,13 +5845,22 @@ aside .links a
     width: 220px;
     max-width: 100%;
     margin-top: 40px;
-    padding: 10px 16px;
+    padding: 9px 15px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #fff;
+    border: 1px solid #233b6d;
     border-radius: 2px;
     background: #233b6d;
+}
+
+
+.product_info .order_btn:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -5819,9 +6320,8 @@ aside .links a
     height: 29px;
     margin: auto;
 
-    transition: opacity .2s linear;
+    transition: transform .2s linear;
 
-    opacity: 0;
     color: #f6f8fb;
     border-radius: 50%;
     background: rgba(56, 182, 226, .5);
@@ -5841,7 +6341,7 @@ aside .links a
 
 .certs .cert:hover .zoom
 {
-    opacity: 1;
+    transform: scale(2);
 }
 
 
@@ -6002,13 +6502,22 @@ aside .links a
     font-weight: 700;
     line-height: 20px;
 
-    padding: 10px 16px;
+    padding: 9px 15px;
 
+    transition: .2s linear;
     letter-spacing: .1px;
 
     color: #fff;
+    border: 1px solid #233b6d;
     border-radius: 3px;
     background: #233b6d;
+}
+
+
+.cookie_panel .btns .btn:hover
+{
+    color: #233b6d;
+    background: #fff;
 }
 
 
@@ -6199,12 +6708,39 @@ footer .catalog .items
 
 footer .catalog .items a
 {
+    position: relative;
+
     display: inline-block;
 
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+footer .catalog .items a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+    pointer-events: none;
+
+    background: currentColor;
+}
+
+
+footer .catalog .items a:hover:after
+{
+    width: 100%;
 }
 
 
@@ -6232,12 +6768,39 @@ footer .menu:last-child .items
 
 footer .menu .items a
 {
+    position: relative;
+
     display: inline-block;
 
     vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+footer .menu .items a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+    pointer-events: none;
+
+    background: currentColor;
+}
+
+
+footer .menu .items a:hover:after
+{
+    width: 100%;
 }
 
 
@@ -6295,6 +6858,8 @@ footer .socials a .icon
 
     width: 18px;
     height: 18px;
+
+    transition: transform .2s linear;
 }
 
 
@@ -6302,6 +6867,12 @@ footer .socials a .icon.big
 {
     width: 24px;
     height: 24px;
+}
+
+
+footer .socials a:hover .icon
+{
+    transform: scale(1.25);
 }
 
 
@@ -6326,9 +6897,39 @@ footer .links
 
 footer .links a
 {
+    position: relative;
+
+    display: inline-block;
+
+    vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+footer .links a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+    pointer-events: none;
+
+    background: currentColor;
+}
+
+
+footer .links a:hover:after
+{
+    width: 100%;
 }
 
 

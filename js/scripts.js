@@ -650,9 +650,11 @@ window.addEventListener('load', function () {
 
 window.addEventListener('scroll', function () {
 	// Fixed product panel
-	$(window).scrollTop() > $('.product_data .tab_content').offset().top
-		? $('.fixed_product_panel').fadeIn(200)
-		: $('.fixed_product_panel').fadeOut(100)
+	if ($('.product_data .tab_content').length) {
+		$(window).scrollTop() > $('.product_data .tab_content').offset().top
+			? $('.fixed_product_panel').fadeIn(200)
+			: $('.fixed_product_panel').fadeOut(100)
+	}
 })
 
 
