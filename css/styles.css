@@ -1759,6 +1759,28 @@ header .catalog_modal .col_main .sub.show
 }
 
 
+.mob_menu .bottom
+{
+    margin-top: 16px;
+    padding-top: 16px;
+
+    border-top: 1px solid #38b6e2;
+}
+
+
+.mob_menu .callback_btn
+{
+    font-weight: 700;
+    line-height: 20px;
+
+    padding: 10px 0;
+
+    letter-spacing: .1px;
+
+    color: #38b6e2;
+}
+
+
 
 /*-------------
     Sidebar
