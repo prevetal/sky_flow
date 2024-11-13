@@ -303,7 +303,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.mob_filter_btn, .filter .close_btn').click(function(e) {
 		e.preventDefault()
 
-		$('.filter').toggleClass('show')
+		setTimeout(() => $('.filter').toggleClass('show'))
+	})
+
+
+	$(document).click(e => {
+		if ($('.filter').hasClass('show') && is_touch_device() && $(e.target).closest('.filter').length === 0) {
+			$('.filter').removeClass('show')
+		}
 	})
 
 
@@ -501,7 +508,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.catalog_modal .col_left .items a').mouseenter(function(e) {
+	const catalogEvent = is_touch_device() ? 'mouseenter' : 'click'
+
+
+	$('.catalog_modal .col_left .items a').on(catalogEvent, function (e) {
 		e.preventDefault()
 
 		$('.catalog_modal .col_left .items a').removeClass('active')
@@ -513,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.catalog_modal .col_main .items a[data-sub]').mouseenter(function(e) {
+	$('.catalog_modal .col_main .items a[data-sub]').on(catalogEvent, function (e) {
 		e.preventDefault()
 
 		let items = $(this).closest('.items'),
@@ -527,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.catalog_modal .col_main .items a[data-sub-level2]').mouseenter(function(e) {
+	$('.catalog_modal .col_main .items a[data-sub-level2]').on(catalogEvent, function (e) {
 		e.preventDefault()
 
 		let items = $(this).closest('.items'),
@@ -541,7 +551,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.catalog_modal .col_main .items a[data-sub-level3]').mouseenter(function(e) {
+	$('.catalog_modal .col_main .items a[data-sub-level3]').on(catalogEvent, function (e) {
 		e.preventDefault()
 
 		let items = $(this).closest('.items'),
@@ -590,6 +600,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$(this).toggleClass('active')
 		$('header .search').toggleClass('show')
+
+		$('body').toggleClass('search_open')
 	})
 
 

@@ -2473,25 +2473,6 @@ aside .links a.active:after
 }
 
 
-.form .field:after
-{
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    left: 0;
-
-    display: block;
-
-    width: 1px;
-    height: 1px;
-
-    content: '';
-    pointer-events: none;
-
-    background: #222470;
-}
-
-
 .form .input
 {
     font-family: var(--font_family);
@@ -2590,6 +2571,33 @@ aside .links a.active:after
 }
 
 
+.form .field .point
+{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 1px;
+    height: 1px;
+
+    content: '';
+    transition: width .3s linear;
+    pointer-events: none;
+
+    background: #222470;
+}
+
+
+.form .input:focus ~ .point,
+.form textarea:focus ~ .point
+{
+    width: 100%;
+}
+
+
 .form .error
 {
     border-color: var(--form_error_color);
@@ -2614,7 +2622,6 @@ aside .links a.active:after
 
     cursor: pointer;
 
-    color: #030303;
     color: #013515;
 }
 
@@ -2648,6 +2655,28 @@ aside .links a.active:after
 }
 
 
+.form .checkbox .check:before
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    content: '';
+    transition: opacity .2s linear;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    opacity: 0;
+    border-radius: 50%;
+    background: rgba(103, 80, 164, .06);
+}
+
+
 .form .checkbox .check svg
 {
     display: block;
@@ -2659,6 +2688,12 @@ aside .links a.active:after
     transition: opacity .2s linear;
 
     opacity: 0;
+}
+
+
+.form .checkbox:hover .check:before
+{
+    opacity: 1;
 }
 
 

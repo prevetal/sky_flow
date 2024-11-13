@@ -983,6 +983,14 @@
     /*-------------------------
         Fixed product panel
     -------------------------*/
+    .search_open .fixed_product_panel
+    {
+        top: 160px;
+
+        border-top: 1px solid #38b6e2;
+    }
+
+
     .fixed_product_panel .product
     {
         width: 100%;
