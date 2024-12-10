@@ -201,6 +201,12 @@
     }
 
 
+    .page_head .all_link
+    {
+        display: none;
+    }
+
+
 
     /*----------------
         Block head
@@ -232,6 +238,12 @@
     /*------------
         Filter
     ------------*/
+    .filter
+    {
+        width: 100%;
+    }
+
+
     .filter .reset_btn
     {
         padding: 9px 15px;
@@ -434,13 +446,13 @@
     }
 
 
-    .brands .brand:nth-child(3n):after
+    .brands .row .brand:nth-child(3n):after
     {
         display: block;
     }
 
 
-    .brands .brand:nth-child(2n):after
+    .brands .row .brand:nth-child(2n):after
     {
         display: none;
     }
@@ -471,13 +483,14 @@
 
     .vacancies .exp
     {
+        margin-bottom: 20px;
         padding-right: 0;
     }
 
 
-    .vacancies .link
+    .vacancies .btn
     {
-        padding-top: 20px;
+        width: 100%;
     }
 
 
@@ -498,6 +511,12 @@
     .articles .grid
     {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .articles .article
+    {
+        background: #f6f8fb;
     }
 
 
@@ -714,14 +733,25 @@
     /*----------------------
         Project examples
     ----------------------*/
-    .project_examples .row
+    .project_examples .tabs .btn
+    {
+        max-width: 220px;
+        min-height: 68px;
+        padding: 3px 19px;
+
+        text-align: left;
+        white-space: normal;
+    }
+
+
+    .project_examples .grid
     {
         margin-bottom: -20px;
         margin-left: 0;
     }
 
 
-    .project_examples .row > *
+    .project_examples .grid > *
     {
         width: 100%;
         margin-bottom: 20px;
@@ -1042,6 +1072,181 @@
     .cookie_panel .btns
     {
         margin-top: 40px;
+    }
+
+
+
+    /*------------------
+        Contacts info
+    ------------------*/
+    .contacts_info .items > *
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .document
+    {
+        gap: 10px;
+    }
+
+
+    .documents .document .icon
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .documents .document .info
+    {
+        order: 3;
+
+        width: calc(100% - 70px);
+    }
+
+
+    .documents .document .name
+    {
+        font-size: 14px;
+    }
+
+
+    .documents .document .checkbox
+    {
+        margin-top: 2px;
+    }
+
+
+
+    /*------------------
+        Service info
+    ------------------*/
+    .service_info .image img
+    {
+        max-height: 164px;
+    }
+
+
+    .service_info .all_link
+    {
+        display: flex;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .block.bg.project_info
+    {
+        padding-top: 10px;
+    }
+
+
+    .project_info .data .bg
+    {
+        height: auto;
+    }
+
+
+    .project_info .features > *
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
+    .project_info .images
+    {
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .project_info .images .big .image
+    {
+        height: 288px;
+    }
+
+
+
+    /*-------------------------
+        Project description
+    -------------------------*/
+    .project_description .all_link
+    {
+        display: flex;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .image
+    {
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-bottom: -40px;
+        margin-left: -20px;
+
+        border-top: 20px solid #fff;
+    }
+
+
+
+    /*---------------------
+        Specialist info
+    ---------------------*/
+    .block.bg.specialist_info
+    {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    .specialist_info .data
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+    .specialist_info .image
+    {
+        width: calc(100% + 40px);
+        max-width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+    .specialist_info .pluses .row
+    {
+        margin-left: 0;
+    }
+
+
+    .specialist_info .pluses .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .specialist_info .pluses .item
+    {
+        padding: 40px 20px;
     }
 
 

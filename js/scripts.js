@@ -418,6 +418,47 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Project info
+	if ($('.project_info .images').length) {
+		const projectThumbs = new Swiper('.project_info .thumbs .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			breakpoints: {
+				0: {
+					slidesPerView: 7,
+					spaceBetween: 12
+				},
+				768: {
+					slidesPerView: 7,
+					spaceBetween: 18
+				}
+			}
+		})
+
+		new Swiper('.project_info .big .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 24,
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			thumbs: {
+				swiper: projectThumbs
+			}
+		})
+	}
+
+
 	// Tabs
 	var locationHash = window.location.hash
 

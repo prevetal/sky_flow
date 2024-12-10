@@ -15,6 +15,13 @@
         margin-bottom: 40px;
     }
 
+    .block.middle_m,
+    .block.big_m
+    {
+        margin-bottom: 60px;
+    }
+
+
     .block.bg
     {
         padding: 40px 0;
@@ -309,6 +316,12 @@
     }
 
 
+    .page_head .row
+    {
+        margin-bottom: 0;
+    }
+
+
 
     /*----------------
         Block head
@@ -369,6 +382,8 @@
     .filter.show
     {
         transform: translateX(100%);
+
+        background: #f6f8fb;
     }
 
 
@@ -520,6 +535,12 @@
     }
 
 
+    .about_info .head .info.mob_hide
+    {
+        display: none;
+    }
+
+
 
     .about_info .middle .data
     {
@@ -621,21 +642,27 @@
     }
 
 
-    .brands .brand:nth-child(4n):after
+    .brands .row .brand:nth-child(4n):after
     {
         display: block;
     }
 
 
-    .brands .brand:nth-child(3n):after
+    .brands .row .brand:nth-child(3n):after
     {
         display: none;
     }
 
 
-    .brands .brand .logo
+    .brands .row .brand .logo
     {
         height: 80px;
+    }
+
+
+    .brands .list .brand
+    {
+        width: 100%;
     }
 
 
@@ -728,14 +755,20 @@
     /*----------------------
         Project examples
     ----------------------*/
-    .project_examples .row
+    .project_examples .tabs
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .project_examples .grid
     {
         margin-bottom: -20px;
         margin-left: -20px;
     }
 
 
-    .project_examples .row > *
+    .project_examples .grid > *
     {
         width: calc(33.333% - 20px);
         margin-bottom: 20px;
@@ -841,7 +874,7 @@
         width: 100%;
         max-width: 100%;
         margin-left: 0;
-        padding: 0 0 60px;
+        padding: 0 0 40px;
     }
 
 
@@ -935,6 +968,241 @@
         padding: 0 20px;
 
         scroll-padding: 0 20px;
+    }
+
+
+
+    /*------------------
+        Contacts info
+    ------------------*/
+    .contacts_info .data
+    {
+        width: 100%;
+    }
+
+
+    .contacts_info .logo
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Documents
+    ---------------*/
+    .documents .mob_filter_btn
+    {
+        display: flex;
+    }
+
+
+    .documents .list
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+    .documents .document
+    {
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+
+    .documents .document .checkbox
+    {
+        order: 1;
+
+        margin: 0;
+    }
+
+
+    .documents .document .icon
+    {
+        order: 2;
+    }
+
+
+    .documents .document .info
+    {
+        order: 3;
+
+        width: calc(100% - 140px);
+    }
+
+
+
+    /*------------------
+        Service info
+    ------------------*/
+    .service_info .data
+    {
+        width: 100%;
+    }
+
+
+    .service_info .image
+    {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+
+    .service_info .image img
+    {
+        max-height: 366px;
+
+        object-fit: cover;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .block.bg.project_info
+    {
+        padding-bottom: 0;
+
+        background: none;
+    }
+
+
+    .project_info .data
+    {
+        order: 2;
+
+        width: calc(100% + 40px);
+        margin-top: 40px;
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 40px 20px;
+
+        background: #f6f8fb;
+    }
+
+
+    .project_info .data .bg
+    {
+        display: block;
+    }
+
+
+    .project_info .features
+    {
+        gap: 40px;
+    }
+
+
+    .project_info .images
+    {
+        width: 646px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .project_info .images .big .image
+    {
+        height: 420px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        width: 100%;
+    }
+
+
+    .article_info .image
+    {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+
+    .article_info .image img
+    {
+        max-height: 366px;
+
+        object-fit: cover;
+    }
+
+
+    .article_info .bg
+    {
+        height: auto;
+    }
+
+
+
+    /*------------
+        Career
+    ------------*/
+    .career .vacancy .desc
+    {
+        max-width: 100%;
+    }
+
+
+    .career .vacancy .link
+    {
+        position: relative;
+        bottom: 0;
+    }
+
+
+
+    /*---------------------
+        Specialist info
+    ---------------------*/
+    .block.bg.specialist_info
+    {
+        background: #fff;
+    }
+
+
+    .specialist_info .data
+    {
+        width: 100%;
+        padding: 40px 20px;
+
+        background: #f6f8fb;
+    }
+
+
+    .specialist_info .image
+    {
+        width: 100%;
+    }
+
+
+
+    .specialist_info .pluses
+    {
+        width: calc(100% + 40px);
+        margin: 20px -20px 0;
+        padding: 20px;
+
+        background: #f6f8fb;
+    }
+
+
+    .specialist_info .pluses .item
+    {
+        font-size: var(--font_size);
+
+        padding: 40px;
+
+        background: #fff;
     }
 
 

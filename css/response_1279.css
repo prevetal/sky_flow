@@ -304,7 +304,7 @@
     /*------------
         Brands
     ------------*/
-    .brands .brand .logo
+    .brands .row .brand .logo
     {
         height: 100px;
     }
@@ -597,6 +597,99 @@
     .files .file .btn
     {
         padding: 10px 8px;
+    }
+
+
+
+    /*------------------
+        Contacts info
+    ------------------*/
+    .contacts_info .data
+    {
+        width: calc(100% - 512px);
+    }
+
+
+    .contacts_info .logo
+    {
+        width: 432px;
+        min-height: 360px;
+    }
+
+
+
+    /*------------------
+        Service info
+    ------------------*/
+    .service_info .data
+    {
+        width: calc(100% - 440px);
+    }
+
+
+    .service_info .image
+    {
+        width: 400px;
+    }
+
+
+
+    /*------------------
+        Project info
+    ------------------*/
+    .project_info .data
+    {
+        width: calc(100% - 480px);
+    }
+
+
+    .project_info .images
+    {
+        width: 440px;
+    }
+
+
+    .project_info .images .big .image
+    {
+        height: 324px;
+    }
+
+
+
+    /*------------------
+        Article info
+    ------------------*/
+    .article_info .data
+    {
+        width: calc(100% - 440px);
+    }
+
+
+    .article_info .image
+    {
+        width: 400px;
+    }
+
+
+
+    /*---------------------
+        Specialist info
+    ---------------------*/
+    .specialist_info .data
+    {
+        width: calc(100% - 560px);
+    }
+
+
+    .specialist_info .image
+    {
+        width: 520px;
+    }
+
+
+    .specialist_info .pluses .item
+    {
+        padding: 40px 24px;
     }
 
 

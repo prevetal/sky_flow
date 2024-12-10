@@ -437,10 +437,16 @@
     /*----------------
         vVacancies
     ----------------*/
+    .vacancies .desc
+    {
+        margin-bottom: 24px;
+    }
+
+
     .vacancies .exp
     {
-        margin-top: 24px;
         padding-top: 11px;
+        padding-bottom: 0;
     }
 
 
@@ -519,14 +525,20 @@
     /*----------------------
         Project examples
     ----------------------*/
-    .project_examples .row
+    .project_examples .tabs .btn + .btn
+    {
+        margin-left: 4px;
+    }
+
+
+    .project_examples .grid
     {
         margin-bottom: -4px;
         margin-left: -4px;
     }
 
 
-    .project_examples .row > *
+    .project_examples .grid > *
     {
         width: calc(33.333% - 4px);
         margin-bottom: 4px;
@@ -617,6 +629,22 @@
     .fixed_product_panel .anchors > * + *
     {
         margin-left: -4px;
+    }
+
+
+
+    /*---------------------
+        Specialist info
+    ---------------------*/
+    .specialist_info .data
+    {
+        width: calc(100% - 720px);
+    }
+
+
+    .specialist_info .image
+    {
+        width: 680px;
     }
 
 
