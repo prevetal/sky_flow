@@ -681,6 +681,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.cookie_panel .btns .btn').click(function(e) {
 		$('.cookie_panel').fadeOut(100)
 	})
+
+
+	// Vacancy
+	$('.career .vacancy .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.vacancy')
+
+		$(this).toggleClass('active')
+
+		parent.find('.desc').slideToggle(300)
+		parent.find('.data').slideToggle(300)
+	})
 })
 
 

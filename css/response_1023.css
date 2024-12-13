@@ -997,6 +997,12 @@
     }
 
 
+    .documents .download
+    {
+        margin-left: 0;
+    }
+
+
     .documents .list
     {
         width: calc(100% + 40px);
@@ -1147,13 +1153,14 @@
     /*------------
         Career
     ------------*/
-    .career .vacancy .desc
+    .career .vacancy .desc,
+    .career .vacancy .data
     {
         max-width: 100%;
     }
 
 
-    .career .vacancy .link
+    .career .vacancy .spoler_btn
     {
         position: relative;
         bottom: 0;

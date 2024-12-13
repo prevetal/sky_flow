@@ -3041,6 +3041,14 @@ aside .links a.active:after
 }
 
 
+.text_block a
+{
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
 
 /*-----------------
     Main slider
@@ -6975,6 +6983,7 @@ aside .links a.active:after
     justify-content: flex-end;
 
     margin-bottom: 16px;
+    margin-left: auto;
 }
 
 
@@ -7821,7 +7830,46 @@ aside .links a.active:after
 }
 
 
-.career .vacancy .link
+.career .vacancy .data
+{
+    display: none;
+
+    width: 1011px;
+    max-width: calc(100% - 144px);
+    padding-top: 16px;
+}
+
+
+.career .vacancy .resume_btn
+{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+
+    width: 220px;
+    max-width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    padding: 0 19px;
+
+    transition: .2s linear;
+    letter-spacing: .1px;
+
+    color: #fff;
+    border: 1px solid #233b6d;
+    border-radius: 2px;
+    background: #233b6d;
+}
+
+
+.career .vacancy .resume_btn:hover
+{
+    color: #233b6d;
+    background: none;
+}
+
+
+.career .vacancy .spoler_btn
 {
     font-size: 14px;
     font-weight: 700;
@@ -7832,16 +7880,6 @@ aside .links a.active:after
     bottom: 25px;
 
     display: flex;
-
-    letter-spacing: .1px;
-
-    color: #38b6e2;
-}
-
-
-.career .vacancy .link a
-{
-    display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -7849,15 +7887,15 @@ aside .links a.active:after
 
     padding: 10px 0;
 
-    text-decoration: none;
+    letter-spacing: .1px;
 
-    color: currentColor;
+    color: #38b6e2;
 
     gap: 8px;
 }
 
 
-.career .vacancy .link .icon
+.career .vacancy .spoler_btn .icon
 {
     display: block;
 
@@ -7868,9 +7906,26 @@ aside .links a.active:after
 }
 
 
-.career .vacancy .link a:hover .icon
+.career .vacancy .spoler_btn span + span
+{
+    display: none;
+}
+
+
+.career .vacancy .spoler_btn:hover .icon
 {
     transform: scale(1.25);
+}
+
+
+.career .vacancy .spoler_btn.active span
+{
+    display: none;
+}
+
+.career .vacancy .spoler_btn.active span + span
+{
+    display: block;
 }
 
 
@@ -8150,6 +8205,7 @@ aside .links a.active:after
 
     padding: 40px;
 
+    transition: .2s linear;
     text-align: center;
     letter-spacing: .1px;
 
@@ -8185,6 +8241,13 @@ aside .links a.active:after
 .specialist_info .pluses .item .icon + *
 {
     margin-top: auto;
+}
+
+
+.specialist_info .pluses .item:hover
+{
+    color: #fff;
+    background: #233b6d;
 }
 
 
